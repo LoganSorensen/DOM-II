@@ -57,11 +57,23 @@ const img = document.querySelectorAll("img").forEach(img => {
     })
 })
 
-// const body = document.querySelector("body");
+const stopLink = document.querySelectorAll("nav a").forEach(stopLink => {
+    stopLink.addEventListener("click", (event) => {
+        event.preventDefault();
+        console.log("Stopped link from reloading the page");
+    })
+})
 
-// body.addEventListener("resize", () => {
-//     body.style.backgroundColor = red;
-// })
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+    body.style.backgroundColor = "green";
+})
+
+const nav = document.querySelector(".main-navigation");
+nav.addEventListener("click", (event) => {
+    nav.style.backgroundColor = "#ffebcd";
+    event.stopPropagation();
+})
 
 
 
