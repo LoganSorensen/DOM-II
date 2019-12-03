@@ -37,6 +37,32 @@ document.addEventListener("keydown", () => {
     alert("What could you possibly be trying to type?");
 })
 
+const text = document.querySelector("p");
+
+text.addEventListener("copy", () => {
+    console.log("Copied text");
+})
+
+window.addEventListener("load", () => {
+    console.log("This page has finished loading");
+})
+
+document.addEventListener("contextmenu", () => {
+    console.log("Context menu opened");
+})
+
+const img = document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("drag", () => {
+        console.log("Dragging");
+    })
+})
+
+// const body = document.querySelector("body");
+
+// body.addEventListener("resize", () => {
+//     body.style.backgroundColor = red;
+// })
+
 
 
 // const navImg = document.querySelector("header img");
@@ -46,3 +72,14 @@ document.addEventListener("keydown", () => {
 //     navImg.addEventListener("scroll", () => {
 //         navImg.style.translateX = "200px";
 //     })
+
+// 1.mouseenter
+// 2.mouseout
+// 3.click
+// 4.dblclick
+// 5.wheel
+// 6.keydown
+// 7.copy
+// 8.load
+// 9.contextmenu
+// 10.drag
